@@ -26,8 +26,8 @@ function swipelr_touch_move(e)
 		return;
 
 	// Bail if next/prev links aren't available...
-	var isMobileVersion = document.getElementsByClassName('nextlinks');
-	if (isMobileVersion.length == 0)
+	var swipelr_np_links = document.getElementsByClassName('nextlinks');
+	if (swipelr_np_links.length == 0)
 		return;
 
 	// New finger location...
