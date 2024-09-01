@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE package-info SYSTEM "http://www.simplemachines.org/xml/package-info">
+<package-info xmlns="http://www.simplemachines.org/xml/package-info" xmlns:smf="http://www.simplemachines.org/">
+	<name>Swipe LR</name>
+	<id>shawnb61:SwipeLR</id>
+	<version>1.0</version>
+	<type>modification</type>
+	<install for="2.1.4-2.1.99">
+		<readme type="file" parsebbc="true">readme.txt</readme> 
+		<require-dir name="Sources" destination="$boarddir"/>
+		<require-dir name="Themes" destination="$boarddir"/>
+		<hook hook="integrate_load_theme" function="swipe_lr_load_js" file="$sourcedir/SwipeLRHooks.php" />
+	</install>	
+	<uninstall for="2.1.4-2.1.99">
+		<hook hook="integrate_load_theme" function="swipe_lr_load_js" file="$sourcedir/SwipeLRHooks.php" reverse="true" />
+		<remove-file name="$themedir/scripts/swipe_lr.js" />
+		<remove-file name="$sourcedir/SwipeLRHooks.php" />
+	</uninstall>
+</package-info>
