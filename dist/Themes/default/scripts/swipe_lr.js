@@ -15,8 +15,8 @@ function get_touches(e)
 
 function swipelr_touch_start(e)
 {
-	const start_touch = get_touches(e)[0];
-	swipelr_x_pos = start_touch.clientX;
+	const swipelr_start = get_touches(e)[0];
+	swipelr_x_pos = swipelr_start.clientX;
 };
 
 function swipelr_touch_move(e)
@@ -38,7 +38,7 @@ function swipelr_touch_move(e)
 		return;
 
 	// Get the two prev/next links...
-	var swipelr_eles = document.getElementsByClassName('nextlinks')[0].getElementsByTagName('a');
+	var swipelr_eles = swipelr_np_links[0].getElementsByTagName('a');
 
 	// right = previous; left = next
 	if (swipelr_x_new > swipelr_x_pos)

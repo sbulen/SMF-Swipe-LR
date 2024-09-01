@@ -10,3 +10,5 @@ Swiping navigates to the next or previous topic in the board.  It behaves as if 
 
 [b]Releases:[/b]
  - v1.0 Initial Commit
+ - v1.0.1 Naming consistency
+ - v1.0.2 Only one call needed
