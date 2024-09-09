@@ -34,7 +34,7 @@ function swipelr_touch_move(e)
 	var swipelr_x_new = e.touches[0].clientX;
 
 	// It can't be too sensitive...  Make sure they really mean it...
-	if (Math.abs(swipelr_x_new - swipelr_x_pos) < 50)
+	if (Math.abs(swipelr_x_new - swipelr_x_pos) < 75)
 		return;
 
 	// Get the two prev/next links...
